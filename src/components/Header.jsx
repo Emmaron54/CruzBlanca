@@ -5,13 +5,13 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const [mostrarHeader, setMostrarHeader] = useState(true);
 
-  const cerrarMenu = () => {
-    const menu = document.getElementById("navbarNav");
-  
-    if (menu && menu.classList.contains("show")) {
-      menu.classList.remove("show");
-    }
-  };
+     const cerrarMenu = () => {
+      const menu = document.getElementById("navbarNav");
+    
+      if (menu && menu.classList.contains("show")) {
+        menu.classList.remove("show");
+      }
+    };
 
   useEffect(() => {
     let ultimaPosicion = window.scrollY;
@@ -70,7 +70,7 @@ function Header() {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto gap-2">
-              <li className="nav-item me-2">
+              <li className="nav-item">
                 <NavLink
                   to="/producto"
                   onClick={cerrarMenu}

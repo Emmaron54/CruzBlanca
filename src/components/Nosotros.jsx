@@ -1,46 +1,71 @@
 function Nosotros() {
-  const eventos = [
-    {
-      año: "2024",
-      titulo: "El comienzo",
-      texto:
-        "Nace la idea de desarrollar una propuesta enfocada en el cuidado personal, buscando combinar calidad, confianza y bienestar en un solo producto.",
-      imagen: "/img/img1.jpg",
-      lado: "izquierda",
-    },
-    {
-      año: "2025",
-      titulo: "Nuestro primer producto",
-      texto:
-        "Damos forma a nuestra primera propuesta y comenzamos a trabajar en el desarrollo de una marca enfocada en las necesidades de nuestros clientes.",
-      imagen: "/img/img1.jpg",
-      lado: "derecha",
-    },
-    {
-      año: "2026",
-      titulo: "Crecimiento",
-      texto:
-        "Continuamos desarrollando nuestra propuesta, buscando ampliar nuestra presencia y ofrecer nuevas alternativas de cuidado personal.",
-      imagen: "/img/img1.jpg",
-      lado: "izquierda",
-    },
-    {
-      año: "2026",
-      titulo: "Nuestra presencia digital",
-      texto:
-        "Creamos nuestra plataforma digital para acercar Cruz Blanca a más personas, facilitar el acceso a nuestra información y mostrar nuestros puntos de venta.",
-      imagen: "/img/img1.jpg",
-      lado: "derecha",
-    },
-    {
-      año: "2026",
-      titulo: "Nuestra presencia digital",
-      texto:
-        "Creamos nuestra plataforma digital para acercar Cruz Blanca a más personas, facilitar el acceso a nuestra información y mostrar nuestros puntos de venta.",
-      imagen: "/img/img1.jpg",
-      lado: "izquierda",
-    }
-  ];
+
+const eventos = [
+  {
+    año: "1983",
+    titulo: "El origen de Cruz Blanca",
+    texto:
+      "Durante el fenómeno de El Niño en Piura, Richard Olaechea recupera una antigua fórmula familiar de polvo medicado para ayudar a las personas afectadas por el sarpullido y las escaldaduras. Al comprobar su eficacia, los vecinos comienzan a solicitar el producto.",
+    imagen: "/img/img1.jpg",
+    lado: "izquierda",
+  },
+  {
+    año: "1983",
+    titulo: "Nace el nombre Cruz Blanca",
+    texto:
+      "Mientras buscaba un nombre para el producto, Richard Olaechea encontró inspiración en un sueño en el que vio una Cruz Blanca. Desde entonces, ese nombre se convirtió en la identidad de un proyecto familiar que comenzó a crecer paso a paso.",
+    imagen: "/img/img1.jpg",
+    lado: "derecha",
+  },
+  {
+    año: "1980s",
+    titulo: "Los primeros pasos",
+    texto:
+      "Cruz Blanca comienza a llegar a pequeñas bodegas de Piura y posteriormente a la farmacia militar y a tradicionales farmacias de la ciudad, ampliando poco a poco su presencia entre las familias del norte del Perú.",
+    imagen: "/img/img1.jpg",
+    lado: "izquierda",
+  },
+  {
+    año: "2006",
+    titulo: "Laboratorios Cruz Blanca del Perú EIRL",
+    texto:
+      "El proyecto familiar se consolida formalmente bajo el nombre Laboratorios Cruz Blanca del Perú EIRL, fortaleciendo la identidad de una marca que ya contaba con reconocimiento entre sus consumidores.",
+    imagen: "/img/img1.jpg",
+    lado: "derecha",
+  },
+  {
+    año: "2014",
+    titulo: "Alelu Yah SAC",
+    texto:
+      "La empresa inicia una nueva etapa bajo el nombre Alelu Yah SAC, manteniendo la esencia, la identidad y el propósito que acompañaron a Cruz Blanca desde sus primeros años.",
+    imagen: "/img/img1.jpg",
+    lado: "izquierda",
+  },
+  {
+    año: "2020s",
+    titulo: "Una marca con trayectoria",
+    texto:
+      "Después de décadas de trabajo, Cruz Blanca consolida su reconocimiento en el norte del Perú, especialmente por su tradición en el cuidado de la piel frente a las escaldaduras y el sarpullido.",
+    imagen: "/img/img1.jpg",
+    lado: "derecha",
+  },
+  {
+    año: "2026",
+    titulo: "Alelu Yah Corp",
+    texto:
+      "En 2026 comienza una nueva etapa bajo el nombre Alelu Yah Corp, orientada a fortalecer la organización y proyectar la marca hacia nuevos mercados y oportunidades de crecimiento.",
+    imagen: "/img/img1.jpg",
+    lado: "izquierda",
+  },
+  {
+    año: "2026",
+    titulo: "Modernización y expansión",
+    texto:
+      "Cruz Blanca avanza hacia una imagen corporativa más moderna y profesional, desarrolla nuevos formatos y busca ampliar su presencia nacional sin perder su esencia familiar, sus valores y la identidad que la acompañan desde su origen.",
+    imagen: "/img/img1.jpg",
+    lado: "derecha",
+  },
+];
 
   const valores = [
     {
