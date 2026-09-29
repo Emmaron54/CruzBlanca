@@ -14,7 +14,7 @@ function Galeria() {
       "/img/img1.jpg",
       "/img/img1.jpg",
       "/img/img1.jpg",
-      "/imgcb/8ab8fa7a-2d49-4f9f-9a58-b68841f7942e.jpg"
+      "/img/8ab8fa7a-2d49-4f9f-9a58-b68841f7942e.jpg"
     ];
   
     return (

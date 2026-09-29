@@ -5,6 +5,14 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const [mostrarHeader, setMostrarHeader] = useState(true);
 
+  const cerrarMenu = () => {
+    const menu = document.getElementById("navbarNav");
+  
+    if (menu && menu.classList.contains("show")) {
+      menu.classList.remove("show");
+    }
+  };
+
   useEffect(() => {
     let ultimaPosicion = window.scrollY;
 
@@ -45,7 +53,7 @@ function Header() {
           >
             <img src="/CBa.png" alt="Cruz Blanca" className="logo-header" />
 
-            <span className="ms-2">Cruz Blanca</span>
+            <span className="ms-2">Cruz Blanca Aleluyah</span>
           </Link>
 
           <button
@@ -65,10 +73,11 @@ function Header() {
               <li className="nav-item me-2">
                 <NavLink
                   to="/producto"
+                  onClick={cerrarMenu}
                   className={({ isActive }) =>
                     isActive
-                      ? "nav-link nav-boton textoaa producto-nav activo"
-                      : "nav-link nav-boton textoaa producto-nav"
+                      ? "nav-link nav-boton textoaa activo"
+                      : "nav-link nav-boton textoaa"
                   }
                 >
                   <i className="bi bi-stars me-2"></i>
@@ -79,6 +88,7 @@ function Header() {
               <li className="nav-item">
                 <NavLink
                   to="/faq"
+                  onClick={cerrarMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "nav-link nav-boton textoaa activo"
@@ -93,6 +103,7 @@ function Header() {
               <li className="nav-item">
                 <NavLink
                   to="/nosotros"
+                  onClick={cerrarMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "nav-link nav-boton textoaa activo"
@@ -107,6 +118,7 @@ function Header() {
               <li className="nav-item">
                 <NavLink
                   to="/mensaje"
+                  onClick={cerrarMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "nav-link nav-boton textoaa activo"
