@@ -11,10 +11,9 @@ function Galeria() {
   
     const imagenes = [
       "/img/img1.jpg",
-      "/img/img1.jpg",
-      "/img/img1.jpg",
-      "/img/img1.jpg",
-      "/img/8ab8fa7a-2d49-4f9f-9a58-b68841f7942e.jpg"
+      "/img/img2.jpg",
+      "/img/img3.jpg",
+      "/img/img4.jpg",
     ];
   
     return (
