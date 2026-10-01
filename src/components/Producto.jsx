@@ -91,7 +91,7 @@ function Producto() {
 
   <a
     href="mapa#mapa"
-    className="btn btn-success btn-lg px-5 py-3 fw-bold"
+    className="btn btncb btn-lg px-5 py-3 fw-bold"
   >
     <i className="bi bi-map me-2"></i>
     Ver puntos de venta

@@ -178,7 +178,7 @@ function Opiniones() {
         {puedeComentar ? (
          <button
          type="button"
-         className="btn btnan btn-success px-4"
+         className="btn btncb px-4"
          onClick={() => setMostrarFormulario(!mostrarFormulario)}
        >
          <i
@@ -287,7 +287,7 @@ function Opiniones() {
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="btn btnan btn-success px-4"
+                      className="btn btncb px-4"
                     >
                       <i className="bi bi-send me-2"></i>
                       Enviar opinión

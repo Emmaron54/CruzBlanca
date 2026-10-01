@@ -17,8 +17,6 @@
 }
 
 
-
-
 .principal{
   color: var(--Principal)
 }
@@ -30,8 +28,8 @@
 .app {
   padding-top: 70px;
   background-image: linear-gradient(
-    rgba(142, 240, 232, 0.9),
-    rgba(210, 255, 247, 0.85)
+    rgba(158, 244, 237, 0.9),
+    rgba(230, 255, 250, 0.85)
   ),
   url("https://images.unsplash.com/photo-1584515933487-779824d29309");
   background-size: cover;
@@ -58,6 +56,19 @@
 
 .cb:hover {
   transform: scale(1.01);
+}
+
+.btncb{
+  background-color: var(--Principal);
+  color: var(--color-blanco);
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btncb:hover{
+  transform: scale(1.02);
+  background-color: var(--PrincipalO);
+  color: var(--color-blanco)
 }
 
 .resalto1{
@@ -127,13 +138,6 @@
   box-shadow:  0px 1px 2px rgba(0,0,0,0.2);
 }
 
-.btnan{
-  transition: all 0.3s ease;
-}
-
-.btnan:hover{
-  transform: scale(1.05);
-}
 
 
 .icono-circulo {

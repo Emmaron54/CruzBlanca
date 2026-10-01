@@ -68,7 +68,7 @@ function Main() {
               Producto de confianza.
             </p>
 
-            <Link className="btn btnan btn-success mt-3 px-4" to="/producto">
+            <Link className="btn btncb mt-3 px-4" to="/producto">
                   Mas información
                 </Link>
             
