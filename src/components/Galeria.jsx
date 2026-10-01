@@ -10,10 +10,9 @@ function Galeria() {
     const [imagenSeleccionada, setImagenSeleccionada] = useState("");
   
     const imagenes = [
-      "/img/img1.jpg",
-      "/img/img2.jpg",
-      "/img/img3.jpg",
-      "/img/img4.jpg",
+      "/img/img2.png",
+      "/img/img3.png",
+      "/img/img4.png",
     ];
   
     return (

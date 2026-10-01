@@ -22,7 +22,7 @@ const eventos = [
     titulo: "Los primeros pasos",
     texto:
       "Cruz Blanca comienza a llegar a pequeñas bodegas de Piura y posteriormente a la farmacia militar y a tradicionales farmacias de la ciudad, ampliando poco a poco su presencia entre las familias del norte del Perú.",
-    imagen: "/img/img5.jpg",
+    imagen: "/img/img5.png",
     lado: "izquierda",
   },
   {
