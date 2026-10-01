@@ -231,6 +231,7 @@ const eventos = [
 
           <div
             className="col-md-6"
+            data-aos="fade-right"
           >
 
             <div className="accordion" id="accordionMision">
@@ -289,6 +290,7 @@ const eventos = [
 
           <div
             className="col-md-6"
+            data-aos="fade-left"
           >
 
             <div className="accordion" id="accordionVision">

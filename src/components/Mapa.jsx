@@ -4,12 +4,12 @@ function Mapa() {
   return (
     <div>
 
-<section id="mapa" className="container py-5 mt-5">
+<section id="mapa" className="container py-5 mt-3">
 
   <div className="text-center mb-5">
-    <h2 className="resalto linea">
+    <h1 className="resalto linea">
       ¿Dónde encontrar Cruz Blanca?
-    </h2>
+    </h1>
 
     <p className="lead">
       Encuentra nuestro producto en establecimientos autorizados de todo el Perú.
