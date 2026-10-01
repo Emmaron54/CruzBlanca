@@ -6,8 +6,18 @@
   --Oscuro: #0f5550;
   --MuyOscuro: #004237;
   --color-texto: #444;
-  --color-blanco: #f0f0f0;
+  --color-blanco: #f9f9f9;
 }
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./assets/MarkPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 .principal{
   color: var(--Principal)
@@ -27,6 +37,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: "Mark Pro", sans-serif;
 }
 
 .cb,
@@ -175,6 +186,7 @@
   color: black;
   scale: 1.05;
 }
+
 
 .footer {
   font-size: 14px;
@@ -736,7 +748,6 @@ header {
 }
 
 .logo-header{
-  width: 70px;
   height: 70px;
   object-fit: contain;
 }

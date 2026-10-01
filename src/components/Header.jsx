@@ -51,9 +51,7 @@ function Header() {
             className="navbar-brand fw-bold cb d-flex align-items-center"
             to="/"
           >
-            <img src="/CBa.png" alt="Cruz Blanca" className="logo-header" />
-
-            <span className="ms-2">Cruz Blanca Aleluyah</span>
+            <img src="/logoletras.png" alt="Cruz Blanca" className="logo-header" />
           </Link>
 
           <button

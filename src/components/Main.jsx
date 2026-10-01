@@ -24,8 +24,6 @@ function Main() {
         </div>
       </div>
 
-    
-
       <section
         id="producto"
         data-aos="fade-up"
