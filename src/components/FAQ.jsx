@@ -5,7 +5,6 @@ function FAQ() {
         <div className="row justify-content-center">
           <div className="col-lg-9">
             <h2 className="text-center fw-bold mb-3 resalto linea">
-              <i className="bi bi-question-circle-fill me-2"></i>
               PREGUNTAS FRECUENTES
             </h2>
             <p className="text-center text-secondary mb-4 fs-5">

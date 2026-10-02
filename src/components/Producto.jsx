@@ -90,7 +90,7 @@ function Producto() {
   </p>
 
   <a
-    href="mapa#mapa"
+    href="mapa"
     className="btn btncb btn-lg px-5 py-3 fw-bold"
   >
     <i className="bi bi-map me-2"></i>

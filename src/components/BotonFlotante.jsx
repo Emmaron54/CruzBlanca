@@ -4,7 +4,7 @@ function BotonFlotante() {
   return (
     <div>
       <Link
-        to="/mapa#mapa"
+        to="/mapa"
         className="boton-flotante"
       >
         <i className="bi bi-geo-alt-fill"></i>

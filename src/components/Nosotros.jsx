@@ -1,71 +1,71 @@
 function Nosotros() {
 
-const eventos = [
-  {
-    año: "1983",
-    titulo: "El origen de Cruz Blanca",
-    texto:
-      "Durante el fenómeno de El Niño en Piura, Richard Olaechea recupera una antigua fórmula familiar de polvo medicado para ayudar a las personas afectadas por el sarpullido y las escaldaduras. Al comprobar su eficacia, los vecinos comienzan a solicitar el producto.",
-    imagen: "/img/img1.jpg",
-    lado: "izquierda",
-  },
-  {
-    año: "1983",
-    titulo: "Nace el nombre Cruz Blanca",
-    texto:
-      "Mientras buscaba un nombre para el producto, Richard Olaechea encontró inspiración en un sueño en el que vio una Cruz Blanca. Desde entonces, ese nombre se convirtió en la identidad de un proyecto familiar que comenzó a crecer paso a paso.",
-    imagen: "/img/img1.jpg",
-    lado: "derecha",
-  },
-  {
-    año: "1980s",
-    titulo: "Los primeros pasos",
-    texto:
-      "Cruz Blanca comienza a llegar a pequeñas bodegas de Piura y posteriormente a la farmacia militar y a tradicionales farmacias de la ciudad, ampliando poco a poco su presencia entre las familias del norte del Perú.",
-    imagen: "/img/img5.png",
-    lado: "izquierda",
-  },
-  {
-    año: "2006",
-    titulo: "Laboratorios Cruz Blanca del Perú EIRL",
-    texto:
-      "El proyecto familiar se consolida formalmente bajo el nombre Laboratorios Cruz Blanca del Perú EIRL, fortaleciendo la identidad de una marca que ya contaba con reconocimiento entre sus consumidores.",
-    imagen: "/img/img1.jpg",
-    lado: "derecha",
-  },
-  {
-    año: "2014",
-    titulo: "Alelu Yah SAC",
-    texto:
-      "La empresa inicia una nueva etapa bajo el nombre Alelu Yah SAC, manteniendo la esencia, la identidad y el propósito que acompañaron a Cruz Blanca desde sus primeros años.",
-    imagen: "/img/img1.jpg",
-    lado: "izquierda",
-  },
-  {
-    año: "2020s",
-    titulo: "Una marca con trayectoria",
-    texto:
-      "Después de décadas de trabajo, Cruz Blanca consolida su reconocimiento en el norte del Perú, especialmente por su tradición en el cuidado de la piel frente a las escaldaduras y el sarpullido.",
-    imagen: "/img/img1.jpg",
-    lado: "derecha",
-  },
-  {
-    año: "2026",
-    titulo: "Alelu Yah Corp",
-    texto:
-      "En 2026 comienza una nueva etapa bajo el nombre Alelu Yah Corp, orientada a fortalecer la organización y proyectar la marca hacia nuevos mercados y oportunidades de crecimiento.",
-    imagen: "/img/img1.jpg",
-    lado: "izquierda",
-  },
-  {
-    año: "2026",
-    titulo: "Modernización y expansión",
-    texto:
-      "Cruz Blanca avanza hacia una imagen corporativa más moderna y profesional, desarrolla nuevos formatos y busca ampliar su presencia nacional sin perder su esencia familiar, sus valores y la identidad que la acompañan desde su origen.",
-    imagen: "/img/img1.jpg",
-    lado: "derecha",
-  },
-];
+  const eventos = [
+    {
+      año: "1983",
+      titulo: "El origen de Cruz Blanca",
+      texto:
+        "Durante el fenómeno de El Niño en Piura, Richard Olaechea recupera una antigua fórmula familiar de polvo medicado para ayudar a las personas afectadas por el sarpullido y las escaldaduras. Al comprobar su eficacia, los vecinos comienzan a solicitar el producto.",
+      imagen: "/img/img1.jpg",
+      lado: "izquierda",
+    },
+    {
+      año: "1983",
+      titulo: "Nace el nombre Cruz Blanca",
+      texto:
+        "Mientras buscaba un nombre para el producto, Richard Olaechea encontró inspiración en un sueño en el que vio una Cruz Blanca. Desde entonces, ese nombre se convirtió en la identidad de un proyecto familiar que comenzó a crecer paso a paso.",
+      imagen: "/img/img1.jpg",
+      lado: "derecha",
+    },
+    {
+      año: "1980s",
+      titulo: "Los primeros pasos",
+      texto:
+        "Cruz Blanca comienza a llegar a pequeñas bodegas de Piura y posteriormente a la farmacia militar y a tradicionales farmacias de la ciudad, ampliando poco a poco su presencia entre las familias del norte del Perú.",
+      imagen: "/img/img5.png",
+      lado: "izquierda",
+    },
+    {
+      año: "2006",
+      titulo: "Laboratorios Cruz Blanca del Perú EIRL",
+      texto:
+        "El proyecto familiar se consolida formalmente bajo el nombre Laboratorios Cruz Blanca del Perú EIRL, fortaleciendo la identidad de una marca que ya contaba con reconocimiento entre sus consumidores.",
+      imagen: "/img/img1.jpg",
+      lado: "derecha",
+    },
+    {
+      año: "2014",
+      titulo: "Alelu Yah SAC",
+      texto:
+        "La empresa inicia una nueva etapa bajo el nombre Alelu Yah SAC, manteniendo la esencia, la identidad y el propósito que acompañaron a Cruz Blanca desde sus primeros años.",
+      imagen: "/img/img1.jpg",
+      lado: "izquierda",
+    },
+    {
+      año: "2020s",
+      titulo: "Una marca con trayectoria",
+      texto:
+        "Después de décadas de trabajo, Cruz Blanca consolida su reconocimiento en el norte del Perú, especialmente por su tradición en el cuidado de la piel frente a las escaldaduras y el sarpullido.",
+      imagen: "/img/img1.jpg",
+      lado: "derecha",
+    },
+    {
+      año: "2026",
+      titulo: "Alelu Yah Corp",
+      texto:
+        "En 2026 comienza una nueva etapa bajo el nombre Alelu Yah Corp, orientada a fortalecer la organización y proyectar la marca hacia nuevos mercados y oportunidades de crecimiento.",
+      imagen: "/img/img1.jpg",
+      lado: "izquierda",
+    },
+    {
+      año: "2026",
+      titulo: "Modernización y expansión",
+      texto:
+        "Cruz Blanca avanza hacia una imagen corporativa más moderna y profesional, desarrolla nuevos formatos y busca ampliar su presencia nacional sin perder su esencia familiar, sus valores y la identidad que la acompañan desde su origen.",
+      imagen: "/img/img1.jpg",
+      lado: "derecha",
+    },
+  ];
 
   const valores = [
     {
@@ -126,17 +126,18 @@ const eventos = [
           </h2>
 
           <p className="parrafoseparado lead">
-            Cruz Blanca es una propuesta orientada al cuidado
-            personal y al bienestar. Nuestro objetivo es ofrecer
-            productos que respondan a las necesidades de nuestros
-            clientes y que puedan formar parte de su vida cotidiana.
+            Cruz Blanca Aleluyah nace en 1983 en Piura, durante el Fenómeno
+            del Niño, como una fórmula familiar creada para aliviar las
+            afecciones cutáneas que el calor y la humedad provocaban en los
+            niños de la zona.
+            peruanas.
           </p>
 
           <p className="parrafoseparado lead">
-            Creemos que un buen producto debe combinar calidad,
-            responsabilidad e innovación. Por ello, buscamos
-            continuar creciendo y desarrollando nuevas alternativas
-            para nuestros clientes.
+          Su efectividad y el cariño con el que fue creada la
+            convirtieron, con el tiempo, en un producto querido y
+            recomendado de generación en generación, hasta consolidarse
+            como el talco medicado de confianza para miles de familias
           </p>
 
         </div>
@@ -148,7 +149,7 @@ const eventos = [
       <section className="py-4">
 
         <div
-          className="text-center mb-5"
+          className="text-center mb-3"
           data-aos="fade-up"
         >
 
