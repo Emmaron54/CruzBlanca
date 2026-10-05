@@ -70,7 +70,7 @@ function AdminMapa() {
 
     axios
       .get(
-        "http://localhost:8080/ubicaciones"
+        "https://cruzblanca-backend-production.up.railway.app/ubicaciones"
       )
       .then((res) => {
 
@@ -94,7 +94,7 @@ function AdminMapa() {
 
     axios
       .post(
-        "http://localhost:8080/ubicaciones",
+        "https://cruzblanca-backend-production.up.railway.app/ubicaciones",
         ubicacion,
         {
           withCredentials: true
@@ -139,7 +139,7 @@ function AdminMapa() {
 
     axios
       .delete(
-        `http://localhost:8080/ubicaciones/${id}`,
+        `https://cruzblanca-backend-production.up.railway.app/ubicaciones/${id}`,
         {
           withCredentials: true
         }

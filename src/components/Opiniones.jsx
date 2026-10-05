@@ -22,7 +22,7 @@ function Opiniones() {
 
   // Obtener opiniones aprobadas desde Spring Boot
   useEffect(() => {
-    fetch("http://localhost:8080/api/opiniones")
+    fetch("https://cruzblanca-backend-production.up.railway.app/api/opiniones")
       .then((respuesta) => {
         if (!respuesta.ok) {
           throw new Error("Error al obtener las opiniones");
@@ -60,7 +60,7 @@ function Opiniones() {
     };
 
     try {
-      const respuesta = await fetch("http://localhost:8080/api/opiniones", {
+      const respuesta = await fetch("https://cruzblanca-backend-production.up.railway.app/api/opiniones", {
         method: "POST",
 
         headers: {

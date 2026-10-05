@@ -8,7 +8,7 @@ function Mensaje() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/mensajes")
+      .get("https://cruzblanca-backend-production.up.railway.app/mensajes")
       .then((res) => {
         setMensajes(res.data);
 
@@ -52,7 +52,7 @@ function Mensaje() {
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src={`http://localhost:8080/uploads/${mensaje.imagen}`}
+              src={`https://cruzblanca-backend-production.up.railway.app/uploads/${mensaje.imagen}`}
               className="img-fluid h-100 w-100"
               style={{ objectFit: "cover" }}
               alt={mensaje.titulo}

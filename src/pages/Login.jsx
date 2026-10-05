@@ -16,7 +16,7 @@ function Login() {
 
     axios
       .post(
-        "http://localhost:8080/auth/login",
+        "https://cruzblanca-backend-production.up.railway.app/auth/login",
         {
           usuario: usuario,
           password: password,

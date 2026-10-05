@@ -96,7 +96,7 @@ function MapaProducto() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:8080/ubicaciones")
+      .get("https://cruzblanca-backend-production.up.railway.app/ubicaciones")
 
       .then((res) => {
 

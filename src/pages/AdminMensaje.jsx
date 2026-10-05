@@ -22,7 +22,7 @@ function AdminMensaje() {
   function cargarMensajes() {
     axios
     .get(
-      "http://localhost:8080/mensajes",
+      "https://cruzblanca-backend-production.up.railway.app/mensajes",
       {
         withCredentials:true
       })
@@ -50,7 +50,7 @@ function AdminMensaje() {
     console.log(datos.get("imagen"));
 
     axios.post(
-      "http://localhost:8080/mensajes",
+      "https://cruzblanca-backend-production.up.railway.app/mensajes",
       datos,
       {
         withCredentials: true
@@ -82,7 +82,7 @@ function AdminMensaje() {
 
     axios
     .delete(
-      `http://localhost:8080/mensajes/${id}`,
+      `https://cruzblanca-backend-production.up.railway.app/mensajes/${id}`,
       {
         withCredentials: true
       }
@@ -165,7 +165,7 @@ function AdminMensaje() {
             <div className="card shadow h-100">
 
               <img
-                src={`http://localhost:8080/uploads/${item.imagen}`}
+                src={`https://cruzblanca-backend-production.up.railway.app/uploads/${item.imagen}`}
                 className="card-img-top"
                 style={{
                   height: "220px",

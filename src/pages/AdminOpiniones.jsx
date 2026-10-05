@@ -7,11 +7,11 @@ function AdminOpiniones() {
   const cargarOpiniones = async () => {
     try {
       const pendientesRes = await fetch(
-        "http://localhost:8080/api/opiniones/pendientes"
+        "https://cruzblanca-backend-production.up.railway.app/api/opiniones/pendientes"
       );
 
       const aprobadasRes = await fetch(
-        "http://localhost:8080/api/opiniones"
+        "https://cruzblanca-backend-production.up.railway.app/api/opiniones"
       );
 
       const pendientesData = await pendientesRes.json();
@@ -32,7 +32,7 @@ function AdminOpiniones() {
   const aprobarOpinion = async (id) => {
     try {
       const respuesta = await fetch(
-        `http://localhost:8080/api/opiniones/${id}/aprobar`,
+        `https://cruzblanca-backend-production.up.railway.app/api/opiniones/${id}/aprobar`,
         {
           method: "PUT",
         }
@@ -59,7 +59,7 @@ function AdminOpiniones() {
 
     try {
       const respuesta = await fetch(
-        `http://localhost:8080/api/opiniones/${id}`,
+        `https://cruzblanca-backend-production.up.railway.app/api/opiniones/${id}`,
         {
           method: "DELETE",
         }
