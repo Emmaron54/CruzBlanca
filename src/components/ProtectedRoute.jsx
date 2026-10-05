@@ -5,7 +5,7 @@ function ProtectedRoute({ children }) {
   const autenticado = localStorage.getItem("admin");
 
   if (!autenticado) {
-   // return <Navigate to="/admin/login" />;
+    return <Navigate to="/admin/login" />;
   }
 
   return children;
