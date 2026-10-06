@@ -13,7 +13,7 @@ function AHeader() {
 
 
     axios.post(
-      "http://localhost:8080/auth/logout",
+      "https://cruzblanca-backend-production.up.railway.app/auth/logout",
       {},
       {
         withCredentials: true
