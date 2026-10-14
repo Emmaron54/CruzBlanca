@@ -165,7 +165,9 @@ function AdminMensaje() {
             <div className="card shadow h-100">
 
               <img
-                src={`https://cruzblanca-backend-production.up.railway.app/uploads/${item.imagen}`}
+                src={item.imagen?.startsWith("http")
+                  ? item.imagen
+                  : `https://cruzblanca-backend-production.up.railway.app/uploads/${item.imagen}`}
                 className="card-img-top"
                 style={{
                   height: "220px",
