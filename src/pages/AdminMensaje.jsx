@@ -1,5 +1,8 @@
+
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+const API = "https://cruzblanca-backend-production.up.railway.app";
 
 function AdminMensaje() {
   const [mensajes, setMensajes] = useState([]);
@@ -8,91 +11,113 @@ function AdminMensaje() {
     titulo: "",
     texto: "",
     autor: "",
-    imagen: "",
   });
 
   const [imagen, setImagen] = useState(null);
+  const [imagenAnterior, setImagenAnterior] = useState("");
+  const [usarAnterior, setUsarAnterior] = useState(false);
 
   useEffect(() => {
     cargarMensajes();
   }, []);
 
-
-  
   function cargarMensajes() {
     axios
-    .get(
-      "https://cruzblanca-backend-production.up.railway.app/mensajes",
-      {
-        withCredentials:true
-      })
-      .then((res) => {
-        setMensajes(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .get(`${API}/mensajes`, { withCredentials: true })
+      .then((res) => setMensajes(res.data))
+      .catch((error) => console.log(error));
   }
+
+  // Obtener imágenes únicas de los mensajes existentes
+  const imagenesDisponibles = [
+    ...new Map(
+      mensajes
+        .filter((item) => item.imagen)
+        .map((item) => {
+          const url = item.imagen.startsWith("http")
+            ? item.imagen
+            : `${API}/uploads/${item.imagen}`;
+
+          return [url, { url, titulo: item.titulo }];
+        })
+    ).values(),
+  ];
 
   function guardarMensaje(e) {
     e.preventDefault();
 
-    const datos = new FormData();
+    const imagenFinal = usarAnterior ? imagenAnterior : imagen;
 
+    if (!imagenFinal) {
+      alert("Selecciona o sube una imagen.");
+      return;
+    }
+
+    const datos = new FormData();
     datos.append("titulo", mensaje.titulo);
     datos.append("texto", mensaje.texto);
     datos.append("autor", mensaje.autor);
-    datos.append("imagen", imagen);
 
-    console.log(datos.get("titulo"));
-    console.log(datos.get("texto"));
-    console.log(datos.get("autor"));
-    console.log(datos.get("imagen"));
+    // El backend actual recibe un archivo MultipartFile.
+    // Si se selecciona una URL anterior, descargamos esa imagen
+    // y la enviamos como archivo para mantener el backend compatible.
+    const prepararYGuardar = async () => {
+      let archivo = imagenFinal;
 
-    axios.post(
-      "https://cruzblanca-backend-production.up.railway.app/mensajes",
-      datos,
-      {
-        withCredentials: true
+      if (usarAnterior) {
+        try {
+          const respuesta = await fetch(imagenAnterior);
+
+          if (!respuesta.ok) {
+            throw new Error("No se pudo obtener la imagen anterior.");
+          }
+
+          const blob = await respuesta.blob();
+          archivo = new File(
+            [blob],
+            "imagen-reutilizada.jpg",
+            { type: blob.type || "image/jpeg" }
+          );
+        } catch (error) {
+          console.error(error);
+          alert(
+            "No se pudo reutilizar esta imagen. Prueba subirla nuevamente."
+          );
+          return;
+        }
       }
-    )
-      .then(() => {
-        alert("Mensaje guardado correctamente");
 
-        cargarMensajes();
+      datos.append("imagen", archivo);
 
-        setMensaje({
-          titulo: "",
-          texto: "",
-          autor: "",
-          imagen: "",
+      axios
+        .post(`${API}/mensajes`, datos, { withCredentials: true })
+        .then(() => {
+          alert("Mensaje guardado correctamente");
+
+          setMensaje({ titulo: "", texto: "", autor: "" });
+          setImagen(null);
+          setImagenAnterior("");
+          setUsarAnterior(false);
+
+          e.target.reset();
+          cargarMensajes();
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("No se pudo guardar el mensaje.");
         });
+    };
 
-        setImagen(null);
-
-        e.target.reset();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    prepararYGuardar();
   }
 
   function eliminarMensaje(id) {
     if (!window.confirm("¿Eliminar mensaje?")) return;
 
     axios
-    .delete(
-      `https://cruzblanca-backend-production.up.railway.app/mensajes/${id}`,
-      {
-        withCredentials: true
-      }
-    )
-      .then(() => {
-        cargarMensajes();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .delete(`${API}/mensajes/${id}`, { withCredentials: true })
+      .then(() => cargarMensajes())
+      .catch((error) => console.log(error));
   }
 
   return (
@@ -100,16 +125,12 @@ function AdminMensaje() {
       <h2>Administrar mensajes</h2>
 
       <form onSubmit={guardarMensaje} className="mt-3">
-
         <input
           className="form-control mb-2"
           placeholder="Título"
           value={mensaje.titulo}
           onChange={(e) =>
-            setMensaje({
-              ...mensaje,
-              titulo: e.target.value,
-            })
+            setMensaje({ ...mensaje, titulo: e.target.value })
           }
           required
         />
@@ -120,39 +141,130 @@ function AdminMensaje() {
           rows="4"
           value={mensaje.texto}
           onChange={(e) =>
-            setMensaje({
-              ...mensaje,
-              texto: e.target.value,
-            })
+            setMensaje({ ...mensaje, texto: e.target.value })
           }
           required
         />
 
         <input
-          className="form-control mb-2"
+          className="form-control mb-3"
           placeholder="Autor"
           value={mensaje.autor}
           onChange={(e) =>
-            setMensaje({
-              ...mensaje,
-              autor: e.target.value,
-            })
+            setMensaje({ ...mensaje, autor: e.target.value })
           }
           required
         />
 
-        <input
-          type="file"
-          className="form-control mb-3"
-          accept="image/*"
-          onChange={(e) => setImagen(e.target.files[0])}
-          required
-        />
+        <div className="mb-3">
+          <label className="form-label fw-bold">
+            Imagen del mensaje
+          </label>
+
+          <div className="d-flex gap-2 flex-wrap mb-3">
+            <button
+              type="button"
+              className={`btn ${
+                !usarAnterior ? "btn-primary" : "btn-outline-primary"
+              }`}
+              onClick={() => {
+                setUsarAnterior(false);
+                setImagenAnterior("");
+              }}
+            >
+              Subir imagen nueva
+            </button>
+
+            <button
+              type="button"
+              className={`btn ${
+                usarAnterior ? "btn-primary" : "btn-outline-primary"
+              }`}
+              onClick={() => {
+                setUsarAnterior(true);
+                setImagen(null);
+              }}
+            >
+              Usar imagen anterior
+            </button>
+          </div>
+
+          {!usarAnterior ? (
+            <input
+              type="file"
+              className="form-control"
+              accept="image/*"
+              onChange={(e) => setImagen(e.target.files[0] || null)}
+              required={!usarAnterior}
+            />
+          ) : (
+            <>
+              {imagenesDisponibles.length > 0 ? (
+                <div className="row g-3">
+                  {imagenesDisponibles.map((item) => (
+                    <div className="col-6 col-md-4 col-lg-3" key={item.url}>
+                      <button
+                        type="button"
+                        className={`card w-100 h-100 p-1 ${
+                          imagenAnterior === item.url
+                            ? "border-primary border-3"
+                            : ""
+                        }`}
+                        onClick={() => setImagenAnterior(item.url)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <img
+                          src={item.url}
+                          alt={item.titulo}
+                          style={{
+                            width: "100%",
+                            height: "120px",
+                            objectFit: "cover",
+                          }}
+                        />
+                        <span className="small text-center p-1">
+                          {item.titulo || "Imagen anterior"}
+                        </span>
+                        {imagenAnterior === item.url && (
+                          <span className="badge bg-primary">
+                            Seleccionada
+                          </span>
+                        )}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-muted">
+                  Todavía no hay imágenes disponibles.
+                </p>
+              )}
+            </>
+          )}
+
+          {(imagen && !usarAnterior) || imagenAnterior ? (
+            <div className="mt-3">
+              <p className="mb-2">Vista previa:</p>
+              <img
+                src={
+                  usarAnterior
+                    ? imagenAnterior
+                    : URL.createObjectURL(imagen)
+                }
+                alt="Vista previa"
+                style={{
+                  maxWidth: "250px",
+                  maxHeight: "200px",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          ) : null}
+        </div>
 
         <button className="btn btn-primary">
           Guardar mensaje
         </button>
-
       </form>
 
       <hr />
@@ -161,34 +273,32 @@ function AdminMensaje() {
 
       <div className="row">
         {mensajes.map((item) => (
-          <div className="col-md-6 col-lg-3 col-sm-12 mt-3 mb-4" key={item.id}>
+          <div
+            className="col-md-6 col-lg-3 col-sm-12 mt-3 mb-4"
+            key={item.id}
+          >
             <div className="card shadow h-100">
-
               <img
-                src={item.imagen?.startsWith("http")
-                  ? item.imagen
-                  : `https://cruzblanca-backend-production.up.railway.app/uploads/${item.imagen}`}
+                src={
+                  item.imagen?.startsWith("http")
+                    ? item.imagen
+                    : `${API}/uploads/${item.imagen}`
+                }
                 className="card-img-top"
-                style={{
-                  height: "220px",
-                  objectFit: "cover",
-                }}
+                style={{ height: "220px", objectFit: "cover" }}
                 alt={item.titulo}
               />
 
               <div className="card-body d-flex flex-column">
-
                 <h5>{item.titulo}</h5>
 
                 <p>
-  {item.texto.length > 100
-    ? item.texto.substring(0, 100) + "..."
-    : item.texto}
-</p>
+                  {item.texto.length > 100
+                    ? item.texto.substring(0, 100) + "..."
+                    : item.texto}
+                </p>
 
-                <small className="text-muted">
-                  {item.autor}
-                </small>
+                <small className="text-muted">{item.autor}</small>
 
                 <div className="mt-auto">
                   <button
@@ -198,9 +308,7 @@ function AdminMensaje() {
                     Eliminar
                   </button>
                 </div>
-
               </div>
-
             </div>
           </div>
         ))}
