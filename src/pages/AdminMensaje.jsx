@@ -241,25 +241,6 @@ function AdminMensaje() {
               )}
             </>
           )}
-
-          {(imagen && !usarAnterior) || imagenAnterior ? (
-            <div className="mt-3">
-              <p className="mb-2">Vista previa:</p>
-              <img
-                src={
-                  usarAnterior
-                    ? imagenAnterior
-                    : URL.createObjectURL(imagen)
-                }
-                alt="Vista previa"
-                style={{
-                  maxWidth: "250px",
-                  maxHeight: "200px",
-                  objectFit: "contain",
-                }}
-              />
-            </div>
-          ) : null}
         </div>
 
         <button className="btn btn-primary">
