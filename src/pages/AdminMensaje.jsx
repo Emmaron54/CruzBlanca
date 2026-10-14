@@ -37,8 +37,14 @@ function AdminMensaje() {
           const url = item.imagen.startsWith("http")
             ? item.imagen
             : `${API}/uploads/${item.imagen}`;
-
-          return [url, { url, titulo: item.titulo }];
+  
+          return [
+            url.split("?")[0],
+            {
+              url,
+              titulo: item.titulo,
+            },
+          ];
         })
     ).values(),
   ];
