@@ -4,7 +4,7 @@ function FAQ() {
       <div className="container my-5">
         <div className="row justify-content-center">
           <div className="col-lg-9">
-            <h2 className="text-center fw-bold mb-3 resalto linea">
+            <h2 className="text-center titulo mb-3 mt-3 resalto linea">
               PREGUNTAS FRECUENTES
             </h2>
             <p className="text-center text-secondary mb-4 fs-5">
@@ -15,7 +15,7 @@ function FAQ() {
               <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq1"
@@ -41,7 +41,7 @@ function FAQ() {
               <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq2"
@@ -65,7 +65,7 @@ function FAQ() {
               <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq3"
@@ -90,7 +90,7 @@ function FAQ() {
               <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq4"
@@ -114,7 +114,7 @@ function FAQ() {
               <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#faq5"

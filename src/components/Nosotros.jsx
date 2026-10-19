@@ -121,7 +121,7 @@ function Nosotros() {
 
         <div className="col-md-8">
 
-          <h2 className="resalto1 mb-3">
+          <h2 className="resalto1 titulo mb-3">
             ¿Quiénes somos?
           </h2>
 
@@ -183,7 +183,7 @@ function Nosotros() {
                     className={`bi ${valor.icono} fs-1 ${valor.color}`}
                   ></i>
 
-                  <h5 className="mt-3 fw-bold">
+                  <h5 className="mt-3 titulo">
                     {valor.titulo}
                   </h5>
 
@@ -242,7 +242,7 @@ function Nosotros() {
                 <h2 className="accordion-header">
 
                   <button
-                    className="accordion-button collapsed fs-5 fw-bold"
+                    className="accordion-button collapsed fs-5 medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#mision"
@@ -301,7 +301,7 @@ function Nosotros() {
                 <h2 className="accordion-header">
 
                   <button
-                    className="accordion-button collapsed fs-5 fw-bold"
+                    className="accordion-button collapsed fs-5 medio"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#vision"

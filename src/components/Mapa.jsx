@@ -7,7 +7,7 @@ function Mapa() {
 <section id="mapa" className="container py-5 mt-3">
 
   <div className="text-center mb-5">
-    <h1 className="resalto linea">
+    <h1 className="resalto titulo linea">
       ¿Dónde encontrar Cruz Blanca?
     </h1>
 
@@ -26,7 +26,7 @@ function Mapa() {
 
       <div className="card border-0 shadow-sm h-100 p-4">
 
-        <h3 className="fw-bold mb-4">
+        <h3 className="titulo mb-4">
           Disponible en:
         </h3>
 
@@ -34,7 +34,7 @@ function Mapa() {
           <i className="bi bi-shop text-white bg-success"></i>
 
           <div>
-            <h5 className="mb-1">Farmacias</h5>
+            <h5 className="mb-1 medio">Farmacias</h5>
             <p className="mb-0 text-muted">
               Encuéntralo en farmacias autorizadas de diferentes ciudades.
             </p>
@@ -45,7 +45,7 @@ function Mapa() {
           <i className="bi bi-cart3 text-white bg-primary"></i>
 
           <div>
-            <h5 className="mb-1">Supermercados</h5>
+            <h5 className="mb-1 medio">Supermercados</h5>
             <p className="mb-0 text-muted">
               Disponible en cadenas de supermercados participantes.
             </p>
@@ -56,7 +56,7 @@ function Mapa() {
           <i className="bi bi-truck text-white bg-danger"></i>
 
           <div>
-            <h5 className="mb-1">Distribuidores</h5>
+            <h5 className="mb-1 medio">Distribuidores</h5>
             <p className="mb-0 text-muted">
               También puedes adquirirlo mediante distribuidores oficiales.
             </p>

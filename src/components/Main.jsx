@@ -6,7 +6,7 @@ function Main() {
     <div className="container mt-5 mb-5">
       <div className="row align-items-center">
         <div className="col-md-6 text-start mb-3 ps-5">
-          <h1 className="fw-bold display-5">
+          <h1 className="titulo display-5">
             Bienvenido a <span className="resalto">Cruz Blanca</span>
           </h1>
           <p className="lead">
@@ -30,7 +30,7 @@ function Main() {
         className="mt-5 text-center py-4 container producto"
       >
         <div className="text-center mb-4">
-          <h2 className="resalto linea">Nuestro Producto</h2>
+          <h2 className="resalto titulo linea">Nuestro Producto</h2>
           <p className="lead">
             Conoce el producto que ha acompañado a miles de familias durante
             años.
@@ -46,7 +46,7 @@ function Main() {
           </div>
 
           <div className="col-md-8 text-start mt-md-4 parrafoseparado">
-            <h3 className="fw-bold resalto1">CRUZ BLANCA</h3>
+            <h3 className="resalto1 medio">CRUZ BLANCA</h3>
             <p className="text-muted mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
               consequuntur voluptas tempore est hic accusantium, suscipit
@@ -81,7 +81,7 @@ function Main() {
       <section data-aos="fade-up" className="container">
 
 <div className="text-center mb-5">
-  <h2 className="resalto linea">¿Por qué elegirnos?</h2>
+  <h2 className="resalto titulo linea">¿Por qué elegirnos?</h2>
   <p className="lead">
     Miles de familias siguen confiando en nosotros por nuestro compromiso con la calidad y el bienestar.
   </p>
@@ -96,7 +96,7 @@ function Main() {
       </div>
 
       <div>
-        <h5 className="fw-bold">Calidad garantizada</h5>
+        <h5 className="medio">Calidad garantizada</h5>
         <p className="text-muted">
           Elaborado bajo altos estándares para brindar confianza y seguridad en cada uso.
         </p>
@@ -111,7 +111,7 @@ function Main() {
       </div>
 
       <div>
-        <h5 className="fw-bold">Más de 40 años de experiencia</h5>
+        <h5 className="medio">Más de 40 años de experiencia</h5>
         <p className="text-muted">
           Décadas acompañando a las familias peruanas con un producto reconocido.
         </p>
@@ -126,7 +126,7 @@ function Main() {
       </div>
 
       <div>
-        <h5 className="fw-bold">Bienestar y cuidado</h5>
+        <h5 className="medio">Bienestar y cuidado</h5>
         <p className="text-muted">
           Nuestro compromiso es ofrecer un producto pensado para el cuidado diario.
         </p>
@@ -141,7 +141,7 @@ function Main() {
       </div>
 
       <div>
-        <h5 className="fw-bold">Confianza de generaciones</h5>
+        <h5 className="medio">Confianza de generaciones</h5>
         <p className="text-muted">
           Un producto que ha permanecido en el mercado gracias a la satisfacción de sus clientes.
         </p>

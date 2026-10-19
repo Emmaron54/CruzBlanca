@@ -63,7 +63,7 @@ function Mensaje() {
 
           <div className="col-md-8 d-flex flex-column">
             <div className="card-body">
-              <h2 className="card-title resalto">
+              <h2 className="card-title resalto titulo">
                 {mensaje.titulo}
               </h2>
 
@@ -96,7 +96,7 @@ function Mensaje() {
                   </button>
 
                   <button
-                    className="btn btn-primary btnan"
+                    className="btn btncb"
                     onClick={cambiarMensaje}
                   >
                     <i className="bi bi-arrow-repeat me-2"></i>
@@ -105,7 +105,7 @@ function Mensaje() {
                 </>
               ) : (
                 <button
-                  className="btn btn-primary btnan"
+                  className="btn btncb"
                   onClick={cambiarMensaje}
                 >
                   <i className="bi bi-shuffle me-2"></i>

@@ -3,7 +3,7 @@ function Producto() {
     <div>
       <section className="container py-5">
         <div className="text-center mb-5">
-          <h1 className="display-4 fw-bold resalto">Cruz Blanca</h1>
+          <h1 className="display-4 titulo resalto">Cruz Blanca</h1>
 
           <p className="lead">
             Un producto que ha acompañado a generaciones de familias peruanas.
@@ -32,32 +32,32 @@ function Producto() {
 
                 <div className="col-md-7">
                   <div className="card-body p-4">
-                    <h2 className="fw-bold mb-4">Ficha del producto</h2>
+                    <h2 className="titulo mb-4">Ficha del producto</h2>
 
                     <table className="table">
                       <tbody>
                         <tr>
-                          <th>Nombre</th>
+                          <th className="medio">Nombre</th>
                           <td>Cruz Blanca</td>
                         </tr>
 
                         <tr>
-                          <th>Categoría</th>
+                          <th className="medio">Categoría</th>
                           <td>Talco corporal</td>
                         </tr>
 
                         <tr>
-                          <th>Presentación</th>
+                          <th className="medio">Presentación</th>
                           <td>100 g</td>
                         </tr>
 
                         <tr>
-                          <th>Uso</th>
+                          <th className="medio">Uso</th>
                           <td>Cuidado e higiene personal</td>
                         </tr>
 
                         <tr>
-                          <th>Calidad</th>
+                          <th className="medio">Calidad</th>
                           <td>
                             <span className="badge bg-success">
                               Garantizada

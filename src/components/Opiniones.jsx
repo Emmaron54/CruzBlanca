@@ -98,7 +98,7 @@ function Opiniones() {
   return (
     <section className="container py-5">
       <div className="text-center mb-3">
-        <h2 className="resalto linea">Lo que dicen nuestros clientes</h2>
+        <h2 className="resalto titulo linea">Lo que dicen nuestros clientes</h2>
       </div>
 
       {opiniones.length > 0 ? (

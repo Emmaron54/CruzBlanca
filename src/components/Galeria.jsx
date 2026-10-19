@@ -36,7 +36,7 @@ function Galeria() {
     <section className="container my-5">
 
       <div className="text-center mb-2">
-        <h2 className="resalto linea">Galería</h2>
+        <h2 className="resalto titulo linea">Galería</h2>
       </div>
 
       <Swiper

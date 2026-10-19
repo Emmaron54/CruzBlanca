@@ -12,7 +12,7 @@
 @font-face {
   font-family: "Mark Pro";
   src: url("./assets/MarkPro.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -23,6 +23,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./assets/MarkPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Títulos principales */
+.titulo {
+  font-family: "Mark Pro", sans-serif  !important;
+  font-weight: 900  !important;
+}
+
+/* Subtítulos */
+.medio {
+  font-family: "Mark Pro", sans-serif !important;
+  font-weight: 500  !important;
+}
 
 
 .principal{
@@ -71,7 +89,9 @@
   background-color: var(--Principal);
   color: var(--color-blanco);
   transition: all 0.3s ease;
-  font-weight: bold;
+  font-family: "Mark Pro", sans-serif !important;
+  font-weight: 500  !important;
+
 }
 
 .btncb:hover{
@@ -83,7 +103,6 @@
 .resalto1{
   color: var(--Oscuro);
   text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-  font-weight: bold;
 }
 
 .barra{
@@ -156,6 +175,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   border: 2px solid var(--color-blanco);
   transition: all .3s ease;
+
   flex-shrink: 0;
 }
 
@@ -174,7 +194,6 @@ body {
 .resalto{
   color: var(--rojoCB);
   text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-  font-weight: bold;
 }
 
 
