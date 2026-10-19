@@ -1,7 +1,7 @@
 function Producto() {
   return (
     <div>
-      <section className="container py-5">
+      <section className="container py-5 mt-3">
         <div className="text-center mb-5">
           <h1 className="display-4 titulo resalto">Cruz Blanca</h1>
 
@@ -81,7 +81,7 @@ function Producto() {
 
   <i className="bi bi-geo-alt-fill fs-1 principal"></i>
 
-  <h2 className="fw-bold mt-3 mb-3">
+  <h2 className="titulo mt-3 mb-3">
     ¿Dónde puedes encontrar Cruz Blanca?
   </h2>
 
@@ -91,7 +91,7 @@ function Producto() {
 
   <a
     href="mapa"
-    className="btn btncb btn-lg px-5 py-3 fw-bold"
+    className="btn btncb btn-lg px-5 py-3"
   >
     <i className="bi bi-map me-2"></i>
     Ver puntos de venta
@@ -103,7 +103,7 @@ function Producto() {
 
       <section className="container py-4">
         <div className="text-center mb-4">
-          <h2 className="resalto linea">¿Porque usar Cruz Blanca?</h2>
+          <h2 className="resalto medio linea">¿Porque usar Cruz Blanca?</h2>
         </div>
 
         <div className="row g-4">
@@ -111,7 +111,7 @@ function Producto() {
             <div className="card h-100 text-center shadow-sm border-0">
               <div className="card-body">
                 <i className="bi bi-shield-fill-check fs-1 text-success"></i>
-                <h5 className="fw-bold mt-3">Calidad</h5>
+                <h5 className="medio mt-3">Calidad</h5>
                 <p className="text-muted">
                   Elaborado bajo altos estándares para brindar confianza en cada
                   uso.
@@ -124,7 +124,7 @@ function Producto() {
             <div className="card h-100 text-center shadow-sm border-0">
               <div className="card-body">
                 <i className="bi bi-heart-pulse-fill fs-1 text-danger"></i>
-                <h5 className="fw-bold mt-3">Bienestar</h5>
+                <h5 className="medio mt-3">Bienestar</h5>
                 <p className="text-muted">
                   Pensado para el cuidado diario y el bienestar de toda la
                   familia.
@@ -137,7 +137,7 @@ function Producto() {
             <div className="card h-100 text-center shadow-sm border-0">
               <div className="card-body">
                 <i className="bi bi-award-fill fs-1 text-warning"></i>
-                <h5 className="fw-bold mt-3">Confianza</h5>
+                <h5 className="medio mt-3">Confianza</h5>
                 <p className="text-muted">
                   Un producto reconocido por generaciones de consumidores.
                 </p>
@@ -149,7 +149,7 @@ function Producto() {
             <div className="card h-100 text-center shadow-sm border-0">
               <div className="card-body">
                 <i className="bi bi-clock-fill fs-1 text-primary"></i>
-                <h5 className="fw-bold mt-3">Duración</h5>
+                <h5 className="medio mt-3">Duración</h5>
                 <p className="text-muted">
                   Efecto prolongado, mayor a 36 horas
                 </p>
@@ -161,7 +161,7 @@ function Producto() {
 
       <section className="container py-5">
         <div className="text-center mb-5">
-          <h2 className="resalto linea">Modo de uso</h2>
+          <h2 className="resalto medio  linea">Modo de uso</h2>
           <p className="lead">
             Sigue estos sencillos pasos para aprovechar al máximo el producto.
           </p>
