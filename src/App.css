@@ -16,6 +16,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./assets/MarkPro-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 
 .principal{
   color: var(--Principal)
