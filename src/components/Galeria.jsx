@@ -30,15 +30,14 @@ function Galeria() {
       imagen: "/img/img6.png",
       descripcion: "PIEZA PUBLICITARIA EN REDES",
     },
+    {
+      imagen: "/img/img7.png",
+      descripcion: "Carmen Rios (Creadora de la formula) llevando prodcuto a vender",
+    },
   ];
 
   return (
     <section className="container my-5">
-
-      <div className="text-center mb-2">
-        <h2 className="resalto titulo linea">Galería</h2>
-      </div>
-
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation

@@ -23,7 +23,7 @@ function Producto() {
                     />
 
                     <img
-                      src="/imagen11.png"
+                      src="/reverso.png"
                       className="img-hover"
                       alt="Producto"
                     />

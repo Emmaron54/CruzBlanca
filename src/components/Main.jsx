@@ -10,7 +10,7 @@ function Main() {
             Bienvenido a <span className="resalto">Cruz Blanca</span>
           </h1>
           <p className="lead">
-            Productos para cuidado de la piel <div>Confiables y de calidad</div>
+           Alivia, previene y cura
           </p>
        
         </div>
