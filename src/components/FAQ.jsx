@@ -1,3 +1,5 @@
+import EasterEgg from "./EasterEgg";
+
 function FAQ() {
   return (
     <div>
@@ -138,6 +140,7 @@ function FAQ() {
           </div>
         </div>
       </div>
+      <EasterEgg />
     </div>
   );
 }

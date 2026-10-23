@@ -852,3 +852,83 @@ header {
   );
   border: 1px solid rgba(46,167,156,.15);
 }
+
+
+/* Botón en la esquina inferior izquierda */
+.easter-egg-boton {
+  position: fixed;
+  left: 12px;
+  bottom: -22px;
+  width: 76px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Cabeza que apenas se asoma */
+.easter-egg-cabeza {
+  position: absolute;
+  width: 76px;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  transform: translateY(38px);
+  transition: transform 0.25s ease;
+}
+
+
+/* Personaje completo, inicialmente oculto */
+.easter-egg-personaje {
+  position: fixed;
+  left: 12px;
+  bottom: 0;
+  width: 110px;
+  z-index: 999;
+  pointer-events: none;
+  transform: translateY(120%);
+  opacity: 0;
+}
+
+.easter-egg-personaje img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Animación al hacer clic */
+.easter-egg-personaje.easter-egg-visible {
+  animation: personaje-asomarse 2.2s ease-in-out forwards;
+}
+
+@keyframes personaje-asomarse {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  72% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .easter-egg-personaje.easter-egg-visible {
+    animation-duration: 0.5s;
+  }
+}
