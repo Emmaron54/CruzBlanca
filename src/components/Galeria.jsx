@@ -34,6 +34,10 @@ function Galeria() {
       imagen: "/img/img7.png",
       descripcion: "Carmen Rios (Creadora de la formula) llevando prodcuto a vender",
     },
+    {
+      imagen: "/img/img8.png",
+      descripcion: "-ENVIO POR COURIER",
+    },
   ];
 
   return (

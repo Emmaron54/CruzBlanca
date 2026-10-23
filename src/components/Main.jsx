@@ -46,12 +46,9 @@ function Main() {
           </div>
 
           <div className="col-md-8 text-start mt-md-4 parrafoseparado">
-            <h3 className="resalto1 medio">CRUZ BLANCA</h3>
+            <h3 className="resalto1 medio">Talco multiusos Cruz Blanca</h3>
             <p className="text-muted mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              consequuntur voluptas tempore est hic accusantium, suscipit
-              laudantium blanditiis, id minus aliquam placeat tempora quis.
-              Iusto esse quos laudantium quidem soluta.
+            Nuestra fórmula ha sido desarrollada y perfeccionada durante más de cuatro décadas. Su principio activo ayuda a aliviar afecciones de la piel, como el acné, los sarpullidos y el escozor. 
             </p>
             <p>
               <i className="bi bi-check-circle-fill text-success me-2"></i>
