@@ -140,26 +140,125 @@
   line-height: 1.5;
 }
 
-.producto-nav {
-  animation: destacarProducto 2.5s ease-in-out infinite;
-}
 
 html,
 body {
   overflow-x: hidden;
 }
 
-.producto-nav:hover {
-  animation: none;
-  transform: scale(1.08);
+
+/* Sección principal del producto */
+.producto {
+  position: relative;
 }
 
-.producto{
-  background-color: var(--color-blanco);
-  border-radius: 20px;
+/* Fondo suave detrás de la imagen */
+.producto-imagen-contenedor {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  box-shadow:  0px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    #f0faf7 0%,
+    #ffffff 100%
+  );
 }
+
+/* Imagen */
+.producto .imagen-producto {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.producto-imagen-contenedor:hover .imagen-producto {
+  transform: scale(1.03);
+}
+
+/* Etiqueta de antigüedad */
+.producto-etiqueta {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background-color: #e3f5ef;
+  color: #006653;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Descripción */
+.producto-descripcion {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+/* Botón */
+.producto .btncb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.producto .btncb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 77, 64, 0.18);
+}
+
+/* Adaptación a celulares */
+@media (max-width: 767.98px) {
+  .producto {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .producto-imagen-contenedor {
+    min-height: 300px;
+    padding: 20px;
+  }
+  
+  .producto .imagen-producto {
+    max-width: 100%;
+    max-height: 280px;
+  }
+
+  .producto .parrafoseparado {
+    margin-top: 1rem;
+  }
+
+  .producto-descripcion {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
+/* Accesibilidad: reduce movimientos si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  .producto .imagen-producto,
+  .producto .btncb {
+    transition: none;
+  }
+
+  .producto-imagen-contenedor:hover .imagen-producto,
+  .producto .btncb:hover {
+    transform: none;
+  }
+}
+
 
 
 

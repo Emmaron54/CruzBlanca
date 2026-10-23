@@ -24,42 +24,66 @@ function Main() {
         </div>
       </div>
 
-      <section
-        id="producto"
-        data-aos="fade-up"
-        className="mt-5 text-center py-4 container producto"
+      
+<section
+  id="producto"
+  data-aos="fade-up"
+  className="container producto mt-5 py-5"
+>
+  <div className="text-center mb-3">
+    <h2 className="resalto titulo linea">Nuestro Producto</h2>
+    <p className="lead text-muted mt-2">
+      Tradición y cuidado para acompañar a tu familia día a día.
+    </p>
+  </div>
+
+  <div className="row align-items-center g-4 g-lg-5">
+    {/* Imagen del producto */}
+    <div className="col-md-5 d-flex justify-content-center align-items-center">
+      <div className="producto-imagen-contenedor">
+        <img
+          className="imagen-producto btnan"
+          src="/imagen11.png"
+          alt="Talco multiusos Cruz Blanca"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    {/* Información del producto */}
+    <div className="col-md-7 text-start parrafoseparado">
+      <span className="producto-etiqueta">
+        Tradición desde hace más de 40 años
+      </span>
+
+      <h3 className="resalto1 medio mt-3 mb-3">
+        Talco multiusos Cruz Blanca
+      </h3>
+
+      <p className="text-muted producto-descripcion">
+        Nuestra fórmula, desarrollada y perfeccionada durante más de cuatro
+        décadas, forma parte de la tradición de muchas familias. Su principio
+        activo ayuda a aliviar molestias cutáneas como el escozor y el
+        salpullido.
+      </p>
+
+      <p className="text-muted producto-descripcion">
+        Un producto versátil que acompaña el cuidado diario de la piel y
+        mantiene viva una historia de confianza transmitida de generación
+        en generación.
+      </p>
+
+      <Link
+        className="btn btncb mt-3 px-4 py-2"
+        to="/producto"
       >
-        <div className="text-center mb-4">
-          <h2 className="resalto titulo linea">Nuestro Producto</h2>
-          <p className="lead">
-            Conoce el producto que ha acompañado a miles de familias durante
-            años.
-          </p>
-        </div>
-        <div className="row g-3 mb-3">
-          <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
-            <img
-              className="imagen-producto btnan"
-              src="/imagen11.png"
-              alt="Producto Cruz Blanca"
-            />
-          </div>
+        Más información
+        <span className="ms-2" aria-hidden="true">→</span>
+      </Link>
+    </div>
+  </div>
+</section>
 
-          <div className="col-md-8 text-start mt-md-4 parrafoseparado">
-            <h3 className="resalto1 medio">Talco multiusos Cruz Blanca</h3>
-            <p className="text-muted mb-4">
-            Con más de cuatro décadas de historia, nuestra fórmula ha sido desarrollada y perfeccionada para acompañarte en el cuidado diario de la piel. Gracias a su principio activo, ayuda a aliviar molestias cutáneas como el escozor y el salpullido.
-            <p>Una fórmula con tradición y versatilidad que ha acompañado a generaciones de familias. 
-            </p>
-            </p>
-
-            <Link className="btn btncb mt-3 px-4" to="/producto">
-                  Mas información
-                </Link>
-            
-          </div>
-        </div>
-      </section>
 
       <Galeria />
 

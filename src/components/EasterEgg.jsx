@@ -1,6 +1,11 @@
 
 import { useRef, useState } from "react";
 
+const sonidos = [
+  "/sounds/weii.mp3",
+  "/sounds/ula.mp3",
+];
+
 export default function EasterEgg() {
   const [visible, setVisible] = useState(false);
   const [animacion, setAnimacion] = useState(0);
@@ -13,18 +18,23 @@ export default function EasterEgg() {
     setVisible(true);
     setAnimacion((actual) => actual + 1);
 
-    // Reproducir el sonido
-    if (!audioRef.current) {
-      audioRef.current = new Audio("/sounds/ula.mp3");
-      audioRef.current.volume = 0.1;
+    // Elegir un sonido aleatorio
+    const sonidoAleatorio =
+      sonidos[Math.floor(Math.random() * sonidos.length)];
+
+    // Crear y reproducir el sonido seleccionado
+    if (audioRef.current) {
+      audioRef.current.pause();
     }
 
-    audioRef.current.currentTime = 0;
+    audioRef.current = new Audio(sonidoAleatorio);
+    audioRef.current.volume = 0.1;
+
     audioRef.current.play().catch((error) => {
       console.warn("No se pudo reproducir el audio:", error);
     });
 
-    // Esconder el personaje después de la animación
+    // Ocultar el personaje después de 2.2 segundos
     clearTimeout(timeoutRef.current);
 
     timeoutRef.current = setTimeout(() => {
@@ -38,8 +48,6 @@ export default function EasterEgg() {
         type="button"
         className="easter-egg-boton"
         onClick={activarEasterEgg}
-        aria-label="Descubrir sorpresa"
-        title="Descubrir sorpresa"
       >
         <img
           src="/personaje.png"
