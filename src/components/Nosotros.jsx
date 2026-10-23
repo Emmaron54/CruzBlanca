@@ -111,7 +111,7 @@ function Nosotros() {
         <div className="col-md-4 mb-4 mb-md-0">
 
           <img
-            src="/img/img1.jpg"
+            src="/img/team.png"
             alt="Cruz Blanca"
             className="img-fluid rounded-4 shadow"
           />

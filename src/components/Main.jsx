@@ -48,8 +48,8 @@ function Main() {
           <div className="col-md-8 text-start mt-md-4 parrafoseparado">
             <h3 className="resalto1 medio">Talco multiusos Cruz Blanca</h3>
             <p className="text-muted mb-4">
-            Con más de cuatro décadas de historia, nuestra fórmula ha sido desarrollada y perfeccionada para acompañarte en el cuidado diario de la piel. Gracias a su principio activo, nuestro talco multiusos ayuda a aliviar molestias cutáneas como el escozor y las irritaciones, y contribuye al cuidado de la piel.
-            <p>Una fórmula con tradición y versatilidad que ha acompañado a generaciones de familias, manteniendo su lugar en el cuidado cotidiano del hogar. 
+            Con más de cuatro décadas de historia, nuestra fórmula ha sido desarrollada y perfeccionada para acompañarte en el cuidado diario de la piel. Gracias a su principio activo, ayuda a aliviar molestias cutáneas como el escozor y el salpullido.
+            <p>Una fórmula con tradición y versatilidad que ha acompañado a generaciones de familias. 
             </p>
             </p>
 
