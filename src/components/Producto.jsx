@@ -217,7 +217,7 @@ function Producto() {
                   Paso 4
                 </span>
                 <h5>¡Listo!</h5>
-                <p>Disfruta de los beneficios del producto.</p>
+                <p>Disfruta de los beneficios de Cruz Blanca.</p>
               </div>
             </div>
           </div>
