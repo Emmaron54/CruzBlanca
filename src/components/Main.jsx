@@ -7,7 +7,7 @@ function Main() {
       <div className="row align-items-center">
         <div className="col-md-6 text-start mb-3 ps-5">
           <h1 className="titulo display-5">
-            Bienvenido a <span className="resalto">Cruz Blanca</span>
+            Alivia tus malestares de la piel con <span className="resalto">Cruz Blanca</span>
           </h1>
           <p className="lead">
            Alivia, previene y cura
