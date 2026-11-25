@@ -14,7 +14,7 @@ function Main() {
            Alivia, previene y cura
           </p>
           <a href="mapa" className="btn btncb mt-3 px-4 py-2 fs-5">
-        ¿Dónde conseguir Cruz Blanca?
+        ¿Dónde puedo conseguirlo?
       </a>
        
         </div>

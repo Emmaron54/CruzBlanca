@@ -26,6 +26,26 @@ const iconoCruzBlanca = L.icon({
   popupAnchor: [0, -45],
 });
 
+const iconoTiendaCercana = L.divIcon({
+  className: "marcador-tienda-cercana",
+  html: `
+    <div class="marcador-cercano-contenedor">
+      <div class="marcador-cercano-halo"></div>
+
+      <div class="marcador-cercano-logo">
+        <img src="/CBMarcador.png" alt="Cruz Blanca" />
+      </div>
+
+      <div class="marcador-cercano-etiqueta">
+        MÁS CERCANA
+      </div>
+    </div>
+  `,
+  iconSize: [100, 90],
+  iconAnchor: [50, 65],
+  popupAnchor: [0, -65],
+});
+
 
 
 /* Icono para la ubicación del usuario */
@@ -452,7 +472,6 @@ function MapaProducto() {
 
 
         <MarkerClusterGroup
-
           iconCreateFunction={
             (cluster) => {
 
@@ -489,24 +508,22 @@ function MapaProducto() {
             (ubicacion) => (
 
               <Marker
-
-                key={
-                  ubicacion.id
-                }
-
-                position={[
-
-                  ubicacion.latitud,
-
-                  ubicacion.longitud
-
-                ]}
-
-                icon={
-                  iconoCruzBlanca
-                }
-
-              >
+  key={ubicacion.id}
+  position={[
+    Number(ubicacion.latitud),
+    Number(ubicacion.longitud)
+  ]}
+  icon={
+    tiendaCercana?.id === ubicacion.id
+      ? iconoTiendaCercana
+      : iconoCruzBlanca
+  }
+  zIndexOffset={
+    tiendaCercana?.id === ubicacion.id
+      ? 1000
+      : 0
+  }
+>
 
 
                 <Popup>
