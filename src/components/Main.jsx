@@ -3,15 +3,19 @@ import Opiniones from "./Opiniones";
 import { Link } from "react-router-dom";
 function Main() {
   return (
+    
     <div className="container mt-5 mb-5">
       <div className="row align-items-center">
-        <div className="col-md-6 text-start mb-3 ps-5">
+        <div className="col-md-6 text-center text-md-start mb-3 ps-5">
           <h1 className="titulo display-5">
             Alivia tus malestares de la piel con <span className="resalto">Cruz Blanca</span>
           </h1>
           <p className="lead">
            Alivia, previene y cura
           </p>
+          <a href="mapa" className="btn btncb mt-3 px-4 py-2 fs-5">
+        ¿Dónde conseguir Cruz Blanca?
+      </a>
        
         </div>
         <div className="col-md-6 text-center mb-3 ps-4">
